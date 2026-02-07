@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Drafter App Server</title>
+    
+    <style>
+      #--drafter-initial-loading-white-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: white;
+        opacity: .5;
+        z-index: 9999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="--drafter-initial-loading-white-screen">Loading, please wait...</div>
+    <div id="drafter-root--">
+      
+        <!-- Drafter App will initialize here -->
+      
+    </div>
+    <script type="text/python" id="user-code">"""Example demonstrating the CurrentLocation component for geolocation."""
+
+from drafter import *
+
+
+@route
+def index(state):
+    """Main page with geolocation component."""
+    return Page(state, [
+        Header("Geolocation Demo"),
+        Paragraph("Click the button below to share your location:"),
+        CurrentLocation("user_location", show_coordinates=True),
+        Button("Submit Location", process_location),
+    ])
+
+
+@route
+def process_location(state, user_location: Location):
+    """Process the location data from the form."""
+    content = [
+        Header("Location Data Received"),
+        Paragraph(f"Status: {user_location.status}"),
+    ]
+    
+    if user_location.status == "granted":
+        content.extend([
+            Paragraph(f"Latitude: {user_location.lat}"),
+            Paragraph(f"Longitude: {user_location.lon}"),
+            Paragraph(f"Accuracy: ±{user_location.accuracy}m"),
+        ])
+        if user_location.altitude is not None:
+            content.append(Paragraph(f"Altitude: {user_location.altitude}m"))
+        if user_location.speed is not None:
+            content.append(Paragraph(f"Speed: {user_location.speed}m/s"))
+        if user_location.heading is not None:
+            content.append(Paragraph(f"Heading: {user_location.heading}°"))
+    elif user_location.status == "denied":
+        content.append(Paragraph("Location access was denied. Please enable it in your browser settings."))
+    elif user_location.status == "error":
+        content.append(Paragraph(f"Error: {user_location.message}"))
+    else:
+        content.append(Paragraph("Location not available."))
+    
+    content.append(Link("Go Back", index))
+    
+    return Page(state, content)
+
+
+start_server()
+</script>
+    
+  <script src="https://cdn.jsdelivr.net/pyodide/v0.29.0/full/pyodide.js"></script>
+  <script src="__drafter_assets/js/drafter.pyodide.js"></script>
+
+    <script>
+      
+  (async () => {
+  try {
+  
+  const pyodide = await window.Drafter.setupPyodide();
+  
+    await window.Drafter.mountDrafterRemote("__drafter_assets/drafter.zip");
+  
+  await window.Drafter.runStudentCode({code: "import os; print(os.listdir('./drafter/'))"});
+  const app = await window.Drafter.runStudentCode({
+  
+    code: document.getElementById('user-code').textContent
+  
+  });
+  console.log("[Drafter AppServer Scaffolding] Student Code Initialized with Pyodide:");
+  } finally {
+  document.getElementById('--drafter-initial-loading-white-screen').remove();
+  }
+  })();
+
+    </script>
+  </body>
+</html>
