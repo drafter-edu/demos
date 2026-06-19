@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Drafter App Server</title>
+    <script>window.DRAFTER_ENGINE = "";</script>
+    
+      <!-- Additional header content from precompilation -->
+      <link type="text/css" rel="stylesheet" href="__drafter_assets/css/drafter_debug.css" class="drafter-precompiled-headers-- drafter-debug-css--">
+<link type="text/css" rel="stylesheet" href="__drafter_assets/css/default.css" class="drafter-precompiled-headers--">
+<link type="text/css" rel="stylesheet" href="__drafter_assets/css/diff2html.min.css" class="drafter-precompiled-headers--">
+      <!-- End of additional header content -->
+    
+    <style>
+      #--drafter-initial-loading-white-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: white;
+        opacity: .5;
+        z-index: 9999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2em;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="--drafter-initial-loading-white-screen">Loading, please wait...</div>
+    <div id="drafter-root--">
+      
+        <!-- Precompiled body content -->
+        <div class="drafter-body--"><div class="header" id="drafter-component-2097668325072">
+  <div class="navbar" id="drafter-component-2097668324752">
+    <div class="logo" id="drafter-component-2097668536512">
+      Nova Studio
+    </div>
+    <div class="nav" id="drafter-component-2097668537184" style="align-items: center; display: flex; flex-direction: row">
+      <a data-nav="index" data-submit-button="&amp;quot;Home#drafter-component-2097668536848&amp;quot;" formaction="#" href="index" id="drafter-component-2097668536848" style="name: --submit-button">
+        Home
+      </a>
+      <a data-nav="features" data-submit-button="&amp;quot;Features#drafter-component-2097668324112&amp;quot;" formaction="#" href="features" id="drafter-component-2097668324112" style="name: --submit-button">
+        Features
+      </a>
+      <a data-nav="work" data-submit-button="&amp;quot;Work#drafter-component-2097668324432&amp;quot;" formaction="#" href="work" id="drafter-component-2097668324432" style="name: --submit-button">
+        Work
+      </a>
+      <a data-nav="contact" data-submit-button="&amp;quot;Contact#drafter-component-2097669139520&amp;quot;" formaction="#" href="contact" id="drafter-component-2097669139520" style="name: --submit-button">
+        Contact
+      </a>
+    </div>
+  </div>
+</div>
+<div class="main" id="drafter-component-2097669440976">
+  <div class="section hero" id="drafter-component-2097668990608">
+    <div class="hero-text" id="drafter-component-2097669138912">
+      <h1>
+        Build clean, modern websites.
+      </h1>
+      Nova Studio creates simple, polished web experiences using clear design, strong layout, and beginner-friendly code.
+      <a data-nav="features" data-submit-button="&amp;quot;Explore Features#drafter-component-2097669139216&amp;quot;" formaction="#" href="features" id="drafter-component-2097669139216" style="name: --submit-button">
+        Explore Features
+      </a>
+    </div>
+    <div class="hero-card" id="drafter-component-2097669138608">
+      <h2>
+        Front Page Demo
+      </h2>
+      This page includes a navigation bar, hero section, call-to-action, feature cards, content banner, footer, and responsive layout.
+    </div>
+  </div>
+  <div class="section" id="features">
+    <h2>
+      Common Website Elements
+    </h2>
+    <div class="cards" id="drafter-component-2097669022800">
+      <div class="card" id="drafter-component-2097669100128">
+        <h3>
+          Navigation Bar
+        </h3>
+        A simple top menu helps visitors move around the website quickly.
+      </div>
+      <div class="card" id="drafter-component-2097669100400">
+        <h3>
+          Hero Section
+        </h3>
+        A large opening area introduces the website and highlights its main message.
+      </div>
+      <div class="card" id="drafter-component-2097669022544">
+        <h3>
+          Feature Cards
+        </h3>
+        Cards organize information into clean, readable sections.
+      </div>
+    </div>
+  </div>
+  <div class="section banner" id="work">
+    <h2>
+      Simple HTML. Basic CSS. Strong Layout.
+    </h2>
+    No JavaScript, no frameworks, no complex tools — just core web design.
+  </div>
+  <div class="section" id="contact">
+    <h2>
+      Contact Us
+    </h2>
+    <div class="cards" id="drafter-component-2097668738704">
+      <div class="card" id="drafter-component-2097669008624">
+        <h3>
+          Email
+        </h3>
+        hello@novastudio.example
+      </div>
+      <div class="card" id="drafter-component-2097669008400">
+        <h3>
+          Location
+        </h3>
+        Design District, Web City
+      </div>
+      <div class="card" id="drafter-component-2097667403216">
+        <h3>
+          Hours
+        </h3>
+        Monday-Friday, 9AM - 5PM
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer" id="drafter-component-2097669441152">
+  © 2026 Nova Studio. All rights reserved.
+</div>
+</div>
+      
+    </div>
+    <script>window.DRAFTER_CONFIGURATION = {"app_builder": {"additional_paths": [], "create_404": "if_missing", "output_directory": "build", "output_filename": "index.html", "pyodide_package_style": "build", "warn_missing_info": true, "zip_output": false}, "app_common": {"asset_directory": false, "engine": "pyodide", "load_packages_automatically": true, "mount_drafter_locally": true, "override_asset_url": false, "prerender_initial_page": true, "project_packages": null, "pyodide_drafter_path": null, "pyodide_url": "https://cdn.jsdelivr.net/pyodide/v0.29.0/full/", "show_filename_as": false, "site_title": "Drafter App Server", "system_packages": ["bakery", "matplotlib", "pillow"]}, "app_server": {"host": "localhost", "inline_py": true, "open_browser": true, "port": 8000, "serve_adjacent_files": true, "use_reloader": true}, "bootstrap": {"config_file": null, "mode": "compile_site", "path": ".\\examples\\sophisticated_demo.py", "verbose": true}, "client_server": {"additional_css_content": [], "additional_header_content": [], "additional_js_content": [], "additional_script_content": [], "additional_style_content": ["\n    * {\n      box-sizing: border-box;\n      margin: 0;\n      padding: 0;\n    }\n\n    body {\n      font-family: Arial, sans-serif;\n      line-height: 1.6;\n      color: #222;\n      background: #f5f7fb;\n    }\n\n    .header {\n      background: white;\n      border-bottom: 1px solid #ddd;\n      position: sticky;\n      top: 0;\n    }\n\n    .navbar {\n      max-width: 1100px;\n      margin: auto;\n      padding: 18px 24px;\n      display: flex;\n      justify-content: space-between;\n      align-items: center;\n    }\n\n    .logo {\n      font-size: 24px;\n      font-weight: bold;\n      color: #3b5bdb;\n    }\n\n    .nav a {\n      color: #333;\n      text-decoration: none;\n      margin-left: 24px;\n      font-weight: bold;\n    }\n\n    .nav a:hover {\n      color: #3b5bdb;\n    }\n\n    .hero {\n      max-width: 1100px;\n      margin: auto;\n      padding: 90px 24px;\n      display: flex;\n      align-items: center;\n      gap: 50px;\n    }\n\n    .hero-text {\n      flex: 1;\n    }\n\n    .hero-text h1 {\n      font-size: 48px;\n      margin-bottom: 20px;\n      line-height: 1.1;\n    }\n\n    .hero-text p {\n      font-size: 18px;\n      margin-bottom: 30px;\n      color: #555;\n    }\n\n    .button {\n      display: inline-block;\n      background: #3b5bdb;\n      color: white;\n      padding: 14px 24px;\n      border-radius: 8px;\n      text-decoration: none;\n      font-weight: bold;\n    }\n\n    .button:hover {\n      background: #2746b8;\n    }\n\n    .hero-card {\n      flex: 1;\n      background: linear-gradient(135deg, #3b5bdb, #15aabf);\n      color: white;\n      padding: 40px;\n      border-radius: 20px;\n      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);\n    }\n\n    .hero-card h2 {\n      margin-bottom: 15px;\n      font-size: 30px;\n    }\n\n    .section {\n      max-width: 1100px;\n      margin: auto;\n      padding: 60px 24px;\n    }\n\n    .section h2 {\n      text-align: center;\n      font-size: 34px;\n      margin-bottom: 35px;\n    }\n\n    .cards {\n      display: flex;\n      gap: 24px;\n    }\n\n    .card {\n      background: white;\n      padding: 28px;\n      border-radius: 14px;\n      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);\n      flex: 1;\n    }\n\n    .card h3 {\n      margin-bottom: 12px;\n      color: #3b5bdb;\n    }\n\n    .banner {\n      background: #222;\n      color: white;\n      text-align: center;\n      padding: 60px 24px;\n    }\n\n    .banner h2 {\n      margin-bottom: 15px;\n      font-size: 32px;\n    }\n\n    .footer {\n      text-align: center;\n      padding: 25px;\n      background: white;\n      color: #666;\n      border-top: 1px solid #ddd;\n    }\n\n    @media (max-width: 750px) {\n      .navbar,\n      .hero,\n      .cards {\n        flex-direction: column;\n        text-align: center;\n      }\n\n      .nav a {\n        display: inline-block;\n        margin: 10px;\n      }\n\n      .hero-text h1 {\n        font-size: 36px;\n      }\n    }\n    "], "deploy_image_path": "", "enable_audit_logging": true, "external_pages": null, "framed": true, "in_debug_mode": true, "information": null, "newlines_to_br": true, "override_asset_url": false, "root_element_id": "drafter-root--", "server_name": "MAIN_SERVER", "site_title": "Drafter Application", "system_routes": [], "theme": "default", "use_shadow_dom": false}};</script>
+    
+      <script>window.DRAFTER_MODIFIED_CONFIGURATION = {"app_builder": {"output_directory": "build"}, "app_common": {"mount_drafter_locally": true}, "app_server": {"prerender_initial_page": false}, "bootstrap": {"mode": "compile_site", "path": ".\\examples\\sophisticated_demo.py"}, "client_server": {}};</script>
+    
+    <script type="text/python" id="user-code">from drafter import *
+
+
+@dataclass
+class State:
+    pass
+
+
+add_website_css("""
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #222;
+      background: #f5f7fb;
+    }
+
+    .header {
+      background: white;
+      border-bottom: 1px solid #ddd;
+      position: sticky;
+      top: 0;
+    }
+
+    .navbar {
+      max-width: 1100px;
+      margin: auto;
+      padding: 18px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #3b5bdb;
+    }
+
+    .nav a {
+      color: #333;
+      text-decoration: none;
+      margin-left: 24px;
+      font-weight: bold;
+    }
+
+    .nav a:hover {
+      color: #3b5bdb;
+    }
+
+    .hero {
+      max-width: 1100px;
+      margin: auto;
+      padding: 90px 24px;
+      display: flex;
+      align-items: center;
+      gap: 50px;
+    }
+
+    .hero-text {
+      flex: 1;
+    }
+
+    .hero-text h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+      line-height: 1.1;
+    }
+
+    .hero-text p {
+      font-size: 18px;
+      margin-bottom: 30px;
+      color: #555;
+    }
+
+    .button {
+      display: inline-block;
+      background: #3b5bdb;
+      color: white;
+      padding: 14px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .button:hover {
+      background: #2746b8;
+    }
+
+    .hero-card {
+      flex: 1;
+      background: linear-gradient(135deg, #3b5bdb, #15aabf);
+      color: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .hero-card h2 {
+      margin-bottom: 15px;
+      font-size: 30px;
+    }
+
+    .section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 60px 24px;
+    }
+
+    .section h2 {
+      text-align: center;
+      font-size: 34px;
+      margin-bottom: 35px;
+    }
+
+    .cards {
+      display: flex;
+      gap: 24px;
+    }
+
+    .card {
+      background: white;
+      padding: 28px;
+      border-radius: 14px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      flex: 1;
+    }
+
+    .card h3 {
+      margin-bottom: 12px;
+      color: #3b5bdb;
+    }
+
+    .banner {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 60px 24px;
+    }
+
+    .banner h2 {
+      margin-bottom: 15px;
+      font-size: 32px;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 25px;
+      background: white;
+      color: #666;
+      border-top: 1px solid #ddd;
+    }
+
+    @media (max-width: 750px) {
+      .navbar,
+      .hero,
+      .cards {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .nav a {
+        display: inline-block;
+        margin: 10px;
+      }
+
+      .hero-text h1 {
+        font-size: 36px;
+      }
+    }
+    """)
+
+# TODO: Do we need `Header` and `Footer` block components?
+# TODO: What about `Nav`, `Section`, `Main`?
+# TODO: Perhaps a generic `Block` element that can be used for all of them?
+
+
+@route
+def index(state: State):
+    return Page(
+        state,
+        [
+            Div(
+                Div(
+                    Div("Nova Studio", classes="logo"),
+                    Row(
+                        Link("Home", index),
+                        Link("Features", "/features"),
+                        Link("Work", "/work"),
+                        Link("Contact", "/contact"),
+                        classes="nav",
+                    ),
+                    classes="navbar",
+                ),
+                classes="header",
+            ),
+            Div(
+                Div(
+                    Div(
+                        Header("Build clean, modern websites."),
+                        "Nova Studio creates simple, polished web experiences using clear"
+                        " design, strong layout, and beginner-friendly code.",
+                        Link("Explore Features", "/features"),
+                        classes="hero-text",
+                    ),
+                    Div(
+                        Header("Front Page Demo", level=2),
+                        "This page includes a navigation bar, hero section, call-to-action,"
+                        " feature cards, content banner, footer, and responsive layout.",
+                        classes="hero-card",
+                    ),
+                    classes="section hero",
+                ),
+                Div(
+                    Header("Common Website Elements", level=2),
+                    Div(
+                        Div(
+                            Header("Navigation Bar", level=3),
+                            "A simple top menu helps visitors move around the website quickly.",
+                            classes="card",
+                        ),
+                        Div(
+                            Header("Hero Section", level=3),
+                            "A large opening area introduces the website and highlights its main message.",
+                            classes="card",
+                        ),
+                        Div(
+                            Header("Feature Cards", level=3),
+                            "Cards organize information into clean, readable sections.",
+                            classes="card",
+                        ),
+                        classes="cards",
+                    ),
+                    id="features",
+                    classes="section",
+                ),
+                Div(
+                    Header("Simple HTML. Basic CSS. Strong Layout.", level=2),
+                    "No JavaScript, no frameworks, no complex tools — just core web design.",
+                    id="work",
+                    classes="section banner",
+                ),
+                Div(
+                    Header("Contact Us", level=2),
+                    Div(
+                        Div(
+                            Header("Email", level=3),
+                            "hello@novastudio.example",
+                            classes="card",
+                        ),
+                        Div(
+                            Header("Location", level=3),
+                            "Design District, Web City",
+                            classes="card",
+                        ),
+                        Div(
+                            Header("Hours", level=3),
+                            "Monday-Friday, 9AM - 5PM",
+                            classes="card",
+                        ),
+                        classes="cards",
+                    ),
+                    classes="section",
+                    id="contact",
+                ),
+                classes="main",
+            ),
+            Div(
+                "© 2026 Nova Studio. All rights reserved.",
+                classes="footer",
+            ),
+        ],
+    )
+
+
+start_server(State())
+</script>
+    <!-- Engine-specific scripts -->
+    
+  <script src="https://cdn.jsdelivr.net/pyodide/v0.29.0/full/pyodide.js"></script>
+  <script src="__drafter_assets/js/drafter.pyodide.js"></script>
+
+    <!-- Engine-specific initialization -->
+    
+  <script>
+  (async () => {
+    try {
+
+      // 0) Set up hot-reloading websocket connection
+      
+  
+      // 1) Load Pyodide
+      const pyodide = await window.Drafter.setupPyodide({
+        pyodideUrl: "https://cdn.jsdelivr.net/pyodide/v0.29.0/full/",
+        systemPackages: ["bakery", "matplotlib", "pillow"],
+      });
+
+      // 4) Mount Drafter either locally or remotely based on configuration
+      
+        await window.Drafter.mountDrafterDirectory();
+      
+
+      // Old debugging step to dump the output of drafter directory
+      // await window.Drafter.runStudentCode({code: "import os; print(os.listdir('./drafter/'))"});
+
+      // 4) Patch Drafter
+      await window.Drafter.patchPythonFeatures();
+
+      // Establish execution options
+      const executionOptions = {
+        // Provide either code or URL
+        
+          code: document.getElementById('user-code').textContent,
+        
+
+        // Provide either automatic package loading or explicit package list
+        loadPackagesAutomatically: true,
+        explicitPackageList: null,
+      }
+
+      // 5) Install students' dependencies
+      await window.Drafter.setupEnvironment(executionOptions);
+
+      // 6) Run students' code
+      const app = await window.Drafter.runStudentCode(executionOptions);
+
+      // All done!
+      console.log("[Drafter AppServer Scaffolding] Student Code Initialized with Pyodide:");
+    } finally {
+      document.getElementById('--drafter-initial-loading-white-screen').remove();
+    }
+  })();
+  </script>
+
+  </body>
+</html>
