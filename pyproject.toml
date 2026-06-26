@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "Demo Sites Made with Drafter V2"
 requires-python = ">=3.12"
 dependencies = [
-    "drafter==2.0.0b3",
+    "drafter==2.0.0b4",
     "pandas",
     "matplotlib",
     "numpy",
