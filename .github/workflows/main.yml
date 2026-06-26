@@ -58,6 +58,7 @@ jobs:
               cp -r "$dir/"* "./_site/$site_name/"
               cd "$dir"
               uv run drafter main.py --compile --output-directory "./_site/$site_name" --production
+              cd ../..
               echo "<li><a href=\"$site_name/\">$site_name</a></li>" >> ./static/index.html
             fi
           done
