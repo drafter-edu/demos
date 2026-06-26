@@ -2,7 +2,7 @@ name: Deploy static site to Pages
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   workflow_dispatch:
 
 permissions:
@@ -18,14 +18,50 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+
+      - name: Set up Python
+        run: uv python install 3.12
+
+      - name: Install dependencies
+        run: uv sync --locked
+
+      - name: Setup site output
+        run: |
+
+          rm -rf _site
+          mkdir -p ./static
+          echo "<html><body><h1>Index of sites:</h1><ul>" > ./static/index.html
 
       - name: Build static output
         run: |
-          rm -rf _site
-          mkdir -p _site
-          rsync -av --exclude '.git' --exclude '.github' ./ _site/
+          rsync -av --exclude '.git' --exclude '.github' ./static/ _site/
+          for dir in ./static/*; do
+            if [ -d "$dir" ]; then
+              site_name=$(basename "$dir")
+              echo "<li><a href=\"$site_name/\">$site_name</a></li>" >> ./static/index.html
+            fi
+          done
           touch _site/.nojekyll
+
+      - name: Build Dynamic sites
+        run: |
+          for dir in ./dynamic/*; do
+            if [ -d "$dir" ]; then
+              site_name=$(basename "$dir")
+              mkdir -p "./_site/$site_name"
+              cp -r "$dir/"* "./_site/$site_name/"
+              cd "$dir"
+              uv run drafter main.py --compile --output-directory "./_site/$site_name" --production
+              echo "<li><a href=\"$site_name/\">$site_name</a></li>" >> ./static/index.html
+            fi
+          done
+          echo "</ul></body></html>" >> ./static/index.html
 
       - uses: actions/upload-pages-artifact@v3
         with:

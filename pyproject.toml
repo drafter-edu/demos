@@ -1,0 +1,16 @@
+[project]
+name = "drafter-demos"
+version = "0.1.0"
+description = "Demo Sites Made with Drafter V2"
+requires-python = ">=3.12"
+dependencies = [
+    "drafter==2.0.0b3",
+    "pandas",
+    "matplotlib",
+    "numpy",
+    "bakery",
+    "pillow",
+]
+
+[tool.uv]
+package = false
