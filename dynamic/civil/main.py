@@ -9,7 +9,6 @@ import numpy as np
 # -------------------------
 
 set_website_title("BridgeBeam Studio")
-hide_debug_information()
 
 add_website_css("body", """
     margin: 0;
