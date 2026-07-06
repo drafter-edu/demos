@@ -139,7 +139,7 @@ wheels = [
 
 [[package]]
 name = "drafter"
-version = "2.0.0b5"
+version = "2.0.0b6"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "bakery" },
@@ -153,9 +153,9 @@ dependencies = [
     { name = "watchfiles" },
     { name = "websockets" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/0e/4e/ce49a8af3e97fea868df46f9b4209a1cc0f429fe78b2e2d635d1121ca0e9/drafter-2.0.0b5.tar.gz", hash = "sha256:06547edff791602ce8357cc3352512f41c9a65dbe137b8b0072abe5d51de25af", size = 31361284, upload-time = "2026-07-06T14:06:23.726Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/2d/2c/cee9328038ebfd12d3d9c4083fe655f2274e8874a77a1d9b95a58bfa78f8/drafter-2.0.0b6.tar.gz", hash = "sha256:9c34929a727a4595cae9c209abdf0c6c6d97d30af7e3cd1b095c7b66b5b1c0b9", size = 31361271, upload-time = "2026-07-06T16:02:06.159Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/89/e5/c258478c96116197b67a1b29bfd8046a2fcecee825cf20df482c3c094535/drafter-2.0.0b5-py3-none-any.whl", hash = "sha256:f644fe176b0730137f0759c3b8d0dced8719065b85c411a8f0cbc299a4b260a1", size = 3879258, upload-time = "2026-07-06T14:06:27.68Z" },
+    { url = "https://files.pythonhosted.org/packages/db/c9/e1726b5c89573801fbf8b03af4f28e0be3655414189ebe4bf0289d5b2e0a/drafter-2.0.0b6-py3-none-any.whl", hash = "sha256:f529ffc4026670affdecc7a97be4f1a925ec2ef2beee756403ae34f7c9a8609b", size = 3879270, upload-time = "2026-07-06T16:02:18.765Z" },
 ]
 
 [[package]]
@@ -174,7 +174,7 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "bakery" },
-    { name = "drafter", specifier = "==2.0.0b5" },
+    { name = "drafter", specifier = "==2.0.0b6" },
     { name = "matplotlib" },
     { name = "numpy" },
     { name = "pandas" },
